@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Level Up AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <div class="eyebrow">YOUR PERSONAL GROWTH SYSTEM</div>
+      <h1>LEVEL UP <span>AI</span></h1>
+      <p>Build the student. Build the analyst. Build the future.</p>
+    </div>
+    <div class="badge" id="levelBadge">LEVEL 1</div>
+  </header>
+
+  <main>
+    <section class="hero card">
+      <div>
+        <h2 id="greeting">Good morning 👊</h2>
+        <p>Your path: <b>Mathematics → Data Analyst → Data Science → AI</b></p>
+      </div>
+      <button onclick="askAI('today')">Give me today's mission</button>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h3>🔥 Progress</h3>
+        <div class="progress"><div id="bar"></div></div>
+        <p><span id="xp">0</span> XP · <span id="done">0</span>/20 missions</p>
+      </div>
+      <div class="card">
+        <h3>🎯 Current Focus</h3>
+        <p><b>Excel + Data Analysis</b></p>
+        <p class="muted">Next: SQL → Python → Statistics → ML/AI</p>
+      </div>
+      <div class="card">
+        <h3>📚 Academic Balance</h3>
+        <p>Keep Mathematics moving while building career skills.</p>
+        <button class="ghost" onclick="askAI('study')">Build today's study split</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="sectionHead">
+        <h2>12-Week Roadmap</h2>
+        <button class="ghost" onclick="resetProgress()">Reset</button>
+      </div>
+      <div id="roadmap"></div>
+    </section>
+
+    <section class="grid two">
+      <div class="card">
+        <h2>⚡ Today's Mission</h2>
+        <div id="mission"></div>
+        <button onclick="completeMission()">Mark mission complete + XP</button>
+      </div>
+
+      <div class="card">
+        <h2>🤖 AI Coach</h2>
+        <textarea id="question" placeholder="Ask: What should I learn next? Why is SQL important? Give me an Excel challenge..."></textarea>
+        <button onclick="askAI('coach')">Ask Coach</button>
+        <div id="aiAnswer" class="answer">Your coach will appear here.</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>🏆 Portfolio Targets</h2>
+      <div class="targets">
+        <label><input type="checkbox" data-target="excel"> Excel dashboard project</label>
+        <label><input type="checkbox" data-target="sql"> SQL analysis project</label>
+        <label><input type="checkbox" data-target="python"> Python data project</label>
+        <label><input type="checkbox" data-target="stats"> Statistics case study</label>
+        <label><input type="checkbox" data-target="ml"> First ML project</label>
+      </div>
+    </section>
+  </main>
+
+  <footer>Level Up AI · Built around your growth, not just your grades.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
