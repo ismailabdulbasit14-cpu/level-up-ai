@@ -1,0 +1,8 @@
+{
+  "appId": "com.levelupai.app",
+  "appName": "Level Up AI",
+  "webDir": "public",
+  "server": {
+    "cleartext": true
+  }
+}
